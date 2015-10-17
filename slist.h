@@ -10,9 +10,11 @@ typedef struct single_list_s
 {
     elem_t data;
     struct single_list_s* next;
-}slist_t;
+}s_list_t;
 
-slist_t* slist_create();
-int slist_destroy(slist_t* slist);
+s_list_t* slist_create();
+int slist_destroy(s_list_t** slist);
+int slist_append(s_list_t* slist, elem_t data);
+elem_t slist_get_by_index(s_list_t* slist, int index);
 
 #endif  /* _SLIST_H_INCLUDE_ */
